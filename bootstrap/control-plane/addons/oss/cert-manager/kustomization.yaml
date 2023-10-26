@@ -6,9 +6,7 @@ configMapGenerator:
     namespace: flux-system
     files:
       - values.yaml=../../../../../charts/addons/cert-manager/values.yaml
-      - dev-values.yaml=../../../../../environments/dev/addons/cert-manager/values.yaml
-      - prod-values.yaml=../../../../../environments/prod/addons/cert-manager/values.yaml
-      - ex-github-ssh-values.yaml=../../../../../clusters/ex-github-ssh/addons/cert-manager/values.yaml
-      - ex-complete-values.yaml=../../../../../clusters/ex-complete/addons/cert-manager/values.yaml
+      - environment-values.yaml=../../../../../environments/{{metadata.labels.environment}}/addons/cert-manager/values.yaml
+      - cluster-values.yaml=../../../../../clusters/{{metadata.labels.cluster_name}}/addons/cert-manager/values.yaml
 configurations:
   - kustomizeconfig.yaml

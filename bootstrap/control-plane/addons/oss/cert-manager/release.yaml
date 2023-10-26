@@ -34,7 +34,7 @@ spec:
     valuesKey: values.yaml
   - kind: ConfigMap
     name: cert-manager-values
-    valuesKey: ${environment}-values.yaml
+    valuesKey: environment-values.yaml
   - kind: ConfigMap
     name: cert-manager-values
-    valuesKey: ${cluster_name}-values.yaml
+    valuesKey: cluster-values.yaml
