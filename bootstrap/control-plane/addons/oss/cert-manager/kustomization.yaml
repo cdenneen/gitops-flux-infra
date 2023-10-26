@@ -1,0 +1,10 @@
+resources:
+  - repository.yaml
+  - release.yaml
+configMapGenerator:
+  - name: cert-manager-values
+    namespace: flux-system
+    files:
+      - values.yaml=../../../../../charts/addons/cert-manager/values.yaml
+      - ${environment}-values.yaml=../../../../../environments/${environment}/addons/cert-manager/values.yaml
+      - ${cluster_name}-values.yaml=../../../../../clusters/${cluster_name}/addons/cert-manager/values.yaml
