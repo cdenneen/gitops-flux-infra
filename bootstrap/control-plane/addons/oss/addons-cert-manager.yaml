@@ -35,9 +35,9 @@ spec:
         namespace: flux-system
       version: ">=1.0.0"
       valuesFiles:
-        - ${basepath}charts/addons/{{values.addonChart}}/values.yaml
-        - ${basepath}environments/${environment}/addons/{{values.addonChart}}/values.yaml
-        - $(basepath}clusters/${cluster_name}/addons/{{values.addonChart}}/values.yaml
+        - ${basepath}charts/addons/cert-manager/values.yaml
+        - ${basepath}environments/${environment}/addons/cert-manager/values.yaml
+        - ${basepath}clusters/${cluster_name}/addons/cert-manager/values.yaml
   interval: 1h0m0s
   values:
     installCRDs: true
