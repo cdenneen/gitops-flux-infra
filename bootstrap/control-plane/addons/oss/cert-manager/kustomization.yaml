@@ -10,3 +10,5 @@ configMapGenerator:
       - prod-values.yaml=../../../../../environments/prod/addons/cert-manager/values.yaml
       - ex-github-ssh-values.yaml=../../../../../clusters/ex-github-ssh/addons/cert-manager/values.yaml
       - ex-complete-values.yaml=../../../../../clusters/ex-complete/addons/cert-manager/values.yaml
+configurations:
+  - kustomizeconfig.yaml
